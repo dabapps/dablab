@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>DabApps Engineering Laboratories</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
 
         <link href="./static/bootstrap.css" rel="stylesheet">
         <link href="./static/bootstrap-responsive.css" rel="stylesheet">
@@ -143,19 +143,6 @@
                 margin-right: -20px;
             }
         </style>
-
-        <script type="text/javascript">
-            /* http://adactio.com/journal/4470/ */
-            if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
-              var viewportmeta = document.querySelector('meta[name="viewport"]');
-              if (viewportmeta) {
-                viewportmeta.content = 'width=device-width, minimum-scale=1.0, maximum-scale=1.0';
-                document.body.addEventListener('gesturestart', function() {
-                  viewportmeta.content = 'width=device-width, minimum-scale=0.25, maximum-scale=1.6';
-                }, false);
-              }
-            }
-        </script>
 
     </head>
 
