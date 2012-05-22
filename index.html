@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>DabApps Engineering Laboratories</title>
-        <meta name="description" content="">
+        <meta content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
 
         <link href="./static/bootstrap.css" rel="stylesheet">
         <link href="./static/bootstrap-responsive.css" rel="stylesheet">
@@ -34,8 +34,8 @@
                 font-size: 35px;
                 text-shadow: #ddd 0 0 5px;
                 color: #A30000;
-                text-align: center;
-                margin-top: -10px;
+                width: 200px;
+                float: left;
             }
 
             h3 {
@@ -43,6 +43,23 @@
                 margin-bottom: 9px;
                 padding-bottom: 9px;
                 border-bottom: 2px solid #ddd;
+            }
+
+            .logo {
+                width: 245px;
+                margin: 0 auto 20px auto;
+            }
+
+            .logo svg {
+                float: left;
+                margin-top: -7px;
+                margin-left: 5px;
+                width: 40px;
+                height: 75px;
+            }
+
+            .logo svg * {
+                fill: #A30000;
             }
 
             .header {
@@ -67,11 +84,60 @@
             }
 
             .well {
-                min-height: 150px;
+                height: 180px;
             }
 
             .well p:first-of-type {
                 font-weight: bold;
+            }
+
+            .footer p {
+                text-align: center;
+                color: gray;
+                border-top: 1px solid #ddd;
+                padding-top: 10px;
+            }
+
+            .footer a {
+                color: gray;
+                font-weight: bold;
+            }
+
+            @media (min-width: 1200px) {
+                .well {
+                    height: 150px;
+                }
+            }
+
+            @media (min-width: 768px) and (max-width: 980px) {
+                .projects .span4 {
+                    width: 342px;
+                    float: left;
+                    margin-left: 20px;
+                }
+
+                .header .span4, .header .span8 {
+                    width: auto;
+                    float: none;
+                    display: block;
+                    margin: 0;
+                }
+
+                .projects .span4 .well {
+                    height: 170px;
+                }
+            }
+
+            @media (max-width: 980px) {
+                .header .span8 {
+                    text-align: center;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .well {
+                    height: auto;
+                }
             }
 
             iframe {
@@ -104,7 +170,22 @@
                         |_|   |_|
 
                     </pre>
-                    <h1><span class="hide">DabApps</span> Engineering Laboratories</h1>
+                    <div class="logo">
+                        <h1><span class="hide">DabApps</span> Engineering Laboratories</h1>
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  width="51.856px" height="100px" viewBox="0 0 51.856 100" enable-background="new 0 0 51.856 100" xml:space="preserve">
+                            <circle cx="33.407" cy="2.502" r="2.5"/>
+                            <circle cx="34.407" cy="11.501" r="2.5"/>
+                            <circle cx="19.907" cy="20.001" r="3"/>
+                            <circle cx="24.907" cy="8.001" r="3"/>
+                            <circle cx="29.407" cy="20.501" r="4.5"/>
+                            <polygon points="27.93,32.004 23.93,32.004 23.93,56.235 8.597,92.002 43.259,92.002 27.93,56.235 "/>
+                            <path d="M50.742,89.162L35.927,54.594V32.476l1.229-2.475h-4.463l-0.766,1.532v23.881l15.21,35.482
+                                c0.785,1.569,0.943,3.008,0.425,3.848c-0.502,0.811-1.793,1.258-3.636,1.258H25.929h-0.001H7.93c-1.842,0-3.133-0.447-3.635-1.258
+                                c-0.519-0.84-0.36-2.278,0.425-3.848l15.21-35.482V31.533l-0.765-1.532h-4.463l1.229,2.475v22.118L1.114,89.162
+                                c-1.403,2.842-1.485,5.64-0.222,7.685c0.89,1.439,2.833,3.155,7.038,3.155h17.998h0.001h17.997c4.205,0,6.148-1.716,7.038-3.155
+                                C52.228,94.802,52.146,92.004,50.742,89.162z"/>
+                        </svg>
+                    </div>
                 </div>
                 <div class="span8 strapline">
                     <p>
@@ -142,20 +223,18 @@
                         <iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=tomchristie&repo=django-rest-framework&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110px" height="20px"></iframe>
                         <h3>django-rest-framework</h3>
                         <p>Lightweight REST framework for Django.</p>
-                        <p>Lets you easily build well-connected, self-describing, and browsable Web APIs.</p>
+                        <p>Lets you easily build well-connected, self-describing, browsable Web APIs.</p>
                         <div class="btn-group">
                             <a href="https://github.com/tomchristie/django-rest-framework" class="btn">GitHub</a>
                         </div>
                     </div>
                 </div>
-            </div>
-             <div class="row projects">
                 <div class="span4">
                     <div class="well">
                         <iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=dabapps&repo=django-email-as-username&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110px" height="20px"></iframe>
                         <h3>django-email-as-username</h3>
                         <p>Use email addresses for user authentication.</p>
-                        <p>Comprehensivly patches Django for email usernames, including the admin and managment commands.</p>
+                        <p>Comprehensively patches Django for email usernames, including the admin and management commands.</p>
                         <div class="btn-group">
                             <a href="https://github.com/dabapps/django-email-as-username" class="btn">GitHub</a>
                         </div>
@@ -261,8 +340,13 @@
                     </div>
                 </div>
             </div>
+
+            <div class="row footer">
+                <div class="span12">
+                    <p>Built with <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>. Icon by <a href="http://thenounproject.com/">The Noun Project.</a></p>
+                </div>
+            </div>
         </div> <!-- /container -->
 
     </body>
 </html>
-
